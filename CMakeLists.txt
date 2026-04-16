@@ -78,10 +78,5 @@ set(3zb2-Header
 	)
 
 # Build the 3zb2 dynamic library
-add_library(game SHARED ${3zb2-Source} ${3zb2-Header})
-set_target_properties(game PROPERTIES
-	PREFIX ""
-	LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug
-	LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release
-)
-target_link_libraries(game ${3zb2LinkerFlags})
+add_library(3zb2 SHARED ${3zb2-Source} ${3zb2-Header})
+target_link_libraries(3zb2 ${3zb2LinkerFlags})
